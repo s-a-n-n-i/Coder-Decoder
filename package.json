@@ -1,0 +1,14 @@
+{
+  "name": "coder",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "decoder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "decoder": "node decoder",
+    "encoder": "node encoder"
+  }
+}
