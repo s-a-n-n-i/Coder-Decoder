@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 rl.question('Enter a string to encode to Uint8Array: ', (input)=>{
-    let uint8Array = encoder.encode(input);
-    console.log(uint8Array);
+    const uint8Array = encoder.encode(input);
+    console.log("Encoded Uint8Array:", uint8Array);
     rl.close();
 });
