@@ -1,7 +1,16 @@
-let uint8Array = new Uint8Array([72, 101, 108, 108, 111, 44, 32, 87, 111, 114, 108, 100, 33]);
 
-console.log(new TextDecoder().decode(uint8Array));
+const readline = require('readline');
 
-let uint8Array_2 = new Uint8Array([228, 189, 160, 229, 165, 189]);
+const decoder = new TextDecoder();
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-console.log(new TextDecoder().decode(uint8Array_2));
+rl.question('Enter a comma-separated list of byte values to decode to string: ', (input)=>{
+    const byteValues = input.split(/\s*,\s*/).map(num => parseInt(num.trim()));
+    const uint8Array = new Uint8Array(byteValues);    
+    const decodedString = decoder.decode(uint8Array);
+    console.log(decodedString);
+    rl.close();
+});
